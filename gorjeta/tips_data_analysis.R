@@ -10,3 +10,5 @@ View(df)
 
 #verifico se todos os dados estão preenchidos
 print(colSums(is.na(df)))
+
+#teste
