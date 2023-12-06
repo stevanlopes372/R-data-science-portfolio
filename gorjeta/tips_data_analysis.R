@@ -34,6 +34,9 @@ unique(df$smoker)
 # validando a suposição 4 usando teste de Shapiro-Wilk
 # Suposição 4- Os resíduos do modelo são normalmente distribuídos
 
+#defino o grupo fumantes
+fumantes <- df$smoker == "Yes"
+
 
 # analisando o grupo de FUMANTES
 shapiro.test(df$total_bill[fumantes])
@@ -86,41 +89,13 @@ var.test(total_bill ~ smoker, data = df)
 # Não há diferença significativa entre as variâncias dos 2 grupos.
 
 
-***********parei aqui
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 t.test(total_bill ~ smoker, data = df, var.equal = TRUE)
 
-# O valor-p do teste é 0.182, logo, maior que 0.05. Falhamos em rejeitar a H0.
-# Podemos concluir que os 2 grupos não tem diferença significativa.
-# Não há diferença significativa entre a média das gorjetas de fumantes _
-  #e não-fumantes
+# O p-value de 0.182 sugere que há uma probabilidade de 18.2% de observar os _
+  # dados que você tem se a hipótese nula (que não há diferença significativa _
+  # nas médias de gorjetas entre fumantes e não fumantes) for verdadeira.
+
+# Com base nos resultados do teste t, não há evidências suficientes para _
+  # rejeitar a hipótese nula. Isso significa que, com um nível de confiança _
+  # de 95%, não encontramos uma diferença significativa nas médias de gorjetas _
+  #entre fumantes e não fumantes na amostra analisada.
