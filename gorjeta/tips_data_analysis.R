@@ -1,4 +1,3 @@
-setwd("C:/Users/neo2g/OneDrive/Documentos/Github Repos/R-data-science-portfolio/gorjeta")
 getwd()
 library(tidyverse)
 library(car)
